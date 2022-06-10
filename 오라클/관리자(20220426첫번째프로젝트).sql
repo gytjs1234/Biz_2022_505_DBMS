@@ -26,6 +26,7 @@ CREATE TABLESPACE firstDB
 DATAFILE 'C:/oraclexe/data/first.dbf'
 SIZE 1M AUTOEXTEND ON NEXT 1K;
 
+
 --기존에 생성한 TABLESPACE 완전히 삭제하기  명령어 실행 CTRL ENTER
 DROP TABLESPACE firstDB 
 INCLUDING CONTENTS AND  DATAFILES CASCADE CONSTRAINTS ;
@@ -58,11 +59,14 @@ GRANT 부여,REVOKE 뻇기
 --접속(login,logon)권한 부여
 GRANT CREATE SESSION TO user1;
 
+
 --table을 생성할수 있는 권한 부여
 GRANT CREATE TABLE TO user1;
 
+
 --TABLESPACE에 접근할수 있는 권한 부여
 GRANT UNLIMITED TABLESPACE TO user1;
+
 
 --user1에 접속권한 회수
 REVOKE CREATE SESSION FROM user1;
